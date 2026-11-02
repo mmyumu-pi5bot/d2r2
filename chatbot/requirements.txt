@@ -1,0 +1,6 @@
+flask>=2.2.5
+werkzeug>=3.0.3
+gunicorn>=22.0.0
+openai
+certifi>2026.10.18
+urllib3>=2.7.0

@@ -3,8 +3,9 @@ FROM python:3.10.0-slim-bullseye
 WORKDIR /root
 RUN mkdir /root/logs
 
-RUN pip install flask
-RUN pip install gunicorn
+RUN pip install --upgrade "setuptools>=78.1.1" "wheel>=0.38.1"
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 RUN READTHEDOCS=True pip install picamera
 
 RUN apt update -y && apt install -y gcc libjpeg-dev
